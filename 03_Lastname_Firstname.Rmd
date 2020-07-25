@@ -111,7 +111,7 @@ unlink("saslog.log")
 Find an R package which is interesting to you. Fill in the package name above, and describe or demonstrate some feature of the package here. 
 
 ### SAS Procedure: XXX
-Look through the [SAS Procedures Guide](https://go.documentation.sas.com/?docsetId=proc&docsetTarget=part-2.htm&docsetVersion=9.4&locale=en) (or [this](https://go.documentation.sas.com/?docsetId=proc&docsetTarget=p0ptdedyvyouspn1erbeqr0floca.htm&docsetVersion=9.4&locale=en) guide to procedures documented elsewhere) and find a procedure that is interesting to you that we haven't yet discussed (which is most of them). Read the documentation of that procedure and demonstrate its use on a data set that is appropriate. Do not just copy the example code - actually explore what the procedure does. 
+Look through the [SAS Procedures Guide](https://go.documentation.sas.com/?docsetId=proc&docsetTarget=part-2.htm&docsetVersion=9.4&locale=en) (or [this](https://go.documentation.sas.com/?docsetId=proc&docsetTarget=p0ptdedyvyouspn1erbeqr0floca.htm&docsetVersion=9.4&locale=en) guide to procedures documented elsewhere) and find a procedure that is interesting to you that we haven't yet discussed (which is most of them). Read the documentation of that procedure and demonstrate its use on a data set that is appropriate. Do not just copy the example code - actually explore what the procedure does. If you need code to get a dataset into SAS, check out [Module 4](https://srvanderplas.github.io/unl-stat850/reading-data.html#delimited-text-files), which has several chunks you can likely steal verbatim. There is also some sample data in the sashelp library.
 
 Fill in your code in the chunk below.
 ```{sashtml proc-demo, error = T}
