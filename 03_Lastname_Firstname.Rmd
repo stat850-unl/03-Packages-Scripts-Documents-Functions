@@ -11,12 +11,15 @@ options(digits = 3)
 
 ```{r load-sas-libraries, echo = F, message = F, warning = F}
 
-saspath <- "/usr/local/SASHome/SASFoundation/9.4/bin/sas_en" # Your SAS path goes here
-sasopts <- "-ls 75"
-knitr::opts_chunk$set(engine.path=list(sas=saspath, saslog=saspath, sashtml=saspath),
-                      engine.opts=list(sas=sasopts, saslog=sasopts, sashtml=sasopts), 
-                      comment=NA)
-library(SASmarkdown)
+require(SASmarkdown)
+sas_enginesetup(sashtml=sashtml)
+
+sasexe <- "C:/Program Files/SASHome/SASFoundation/9.4/sas.exe"
+sasopts <- "-nosplash -ls 75"
+
+# Linux options (for grading, please leave this in!)
+# sasexe <- "/usr/local/SASHome/SASFoundation/9.4/bin/sas_en"
+# sasopts <- "-ls 75"
 ```
 
 ## Instructions
@@ -59,8 +62,7 @@ fizzbuzz(sample(1:100, 10)) # sample 10 values from 1 to 100
 
 In the sas chunk, write similar code which will solve this problem.
 
-```{sashtml fizzbuzz-sas, error = T}
-proc printto log="saslog.log" new;
+```{r fizzbuzz-sas, engine="sashtml", engine.path=sasexe, engine.opts=sasopts, error = T}
 proc iml;
 
 start fizzbuzz(x);
@@ -94,15 +96,6 @@ print x2, fb2;
 quit;
 ```
 
-```{r readlog}
-cat(readLines("saslog.log"), sep="\n")
-```
-
-
-```{r cleanuplog}
-# Do not forget to remove the log file when you are done!
-unlink("saslog.log")
-```
 
 
 ## Exploring Packages and Modules
@@ -114,20 +107,6 @@ Find an R package which is interesting to you. Fill in the package name above, a
 Look through the [SAS Procedures Guide](https://go.documentation.sas.com/?docsetId=proc&docsetTarget=part-2.htm&docsetVersion=9.4&locale=en) (or [this](https://go.documentation.sas.com/?docsetId=proc&docsetTarget=p0ptdedyvyouspn1erbeqr0floca.htm&docsetVersion=9.4&locale=en) guide to procedures documented elsewhere) and find a procedure that is interesting to you that we haven't yet discussed (which is most of them). Read the documentation of that procedure and demonstrate its use on a data set that is appropriate. Do not just copy the example code - actually explore what the procedure does. 
 
 Fill in your code in the chunk below.
-```{sashtml proc-demo, error = T}
-proc printto log="saslog.log" new;
-
+```{r proc-demo, engine="sashtml", engine.path=sasexe, engine.opts=sasopts, error = T}
 
 ````
-
-
-```{r readlog2}
-cat(readLines("saslog.log"), sep="\n")
-```
-
-
-```{r cleanuplog2}
-# Do not forget to remove the log file when you are done!
-unlink("saslog.log")
-```
-
