@@ -104,7 +104,7 @@ unlink("saslog.log")
 ## Exploring Packages and Modules
 
 ### R Package: XXXX
-Find an R package which is interesting to you. Fill in the package name above, and describe or demonstrate some feature of the package here. 
+Find an R package which is interesting to you. Fill in the package name above, and describe or demonstrate some feature of the package here. You may want to use [this list](https://ids-s1-20.github.io/homework/hw-04/hw-04-potpourri.html#part-2---you-gotta-pick-a-package-or-two) for inspiration.
 
 ```{r, cache = T}
 
